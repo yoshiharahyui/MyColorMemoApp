@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vom-Wu-XVX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1em-IS-tv5">
+            <objects>
+                <navigationController id="Vom-Wu-XVX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w5t-CD-P0g">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GwL-nD-gVo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkZ-hl-V3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1264" y="-37"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyColorMemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UBq-hn-BdB">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UBq-hn-BdB" secondAttribute="bottom" id="14p-WC-7tU"/>
+                            <constraint firstItem="UBq-hn-BdB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="53J-Hu-Wrm"/>
+                            <constraint firstItem="UBq-hn-BdB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="98l-NV-rNX"/>
+                            <constraint firstItem="UBq-hn-BdB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SAq-Da-XOD"/>
+                            <constraint firstItem="UBq-hn-BdB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dql-jo-2NO"/>
+                            <constraint firstItem="UBq-hn-BdB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ir9-dG-wkr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y7D-3S-w7g"/>
+                    <connections>
+                        <outlet property="tableView" destination="UBq-hn-BdB" id="Xoc-Ks-IkV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222.13740458015266" y="-37.323943661971832"/>
+        </scene>
+        <!--Memo Detail View Controller-->
+        <scene sceneID="qfb-qo-haj">
+            <objects>
+                <viewController storyboardIdentifier="MemoDetailViewController" id="SBx-4w-5Bb" customClass="MemoDetailViewController" customModule="MyColorMemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FCE-zV-oQh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vSR-Kr-o1C">
+                                <rect key="frame" x="10" y="69" width="373" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5zq-lI-Mvq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5zq-lI-Mvq" firstAttribute="trailing" secondItem="vSR-Kr-o1C" secondAttribute="trailing" constant="10" id="fSl-tR-hlE"/>
+                            <constraint firstItem="vSR-Kr-o1C" firstAttribute="leading" secondItem="5zq-lI-Mvq" secondAttribute="leading" constant="10" id="kCs-ni-TmS"/>
+                            <constraint firstItem="5zq-lI-Mvq" firstAttribute="bottom" secondItem="vSR-Kr-o1C" secondAttribute="bottom" constant="10" id="pC4-bx-RaR"/>
+                            <constraint firstItem="vSR-Kr-o1C" firstAttribute="top" secondItem="5zq-lI-Mvq" secondAttribute="top" constant="10" id="uu6-LL-4BG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="vSR-Kr-o1C" id="cwT-m7-NRu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngh-6g-0LW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202.29007633587784" y="592.95774647887322"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
